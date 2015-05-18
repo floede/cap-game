@@ -1,5 +1,10 @@
 if (Meteor.isClient) {
+  $(function(){
+    console.log("TEST TEST");
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
 
+  }); 
 }
 
 if (Meteor.isServer) {
