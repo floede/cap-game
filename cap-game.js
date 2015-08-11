@@ -1,8 +1,17 @@
+/* global Meteor */
 if (Meteor.isClient) {
   $(function(){
-    console.log("TEST TEST");
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
+
+
+    // https://atmospherejs.com/etjana/instafeed
+    var feed = new Instafeed({
+        get: 'user',
+        userId: YOUR_USER_ID,
+        accessToken: 'YOUR_ACCESS_TOKEN'        
+    });
+    feed.run();
 
   }); 
 }
